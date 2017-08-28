@@ -1,0 +1,160 @@
+html {
+    font-family: 'robotoregular';
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $color_default;
+    font-family: 'robotoregular';
+    background: $block_lightgrey;
+    min-height: 100%;
+    height: 100%;
+}
+
+h1,
+h1,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.no-floating {
+    float: none;
+}
+
+.position_suffix {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mat-input-ripple {
+    background: $color_sky;
+}
+
+.mat-focused {
+    .mat-input-placeholder {
+        color: $color_sky;
+    }
+    .position_suffix {
+        @extend .mat-input-placeholder;
+    }
+}
+
+.colorcap {
+    background: #4ac7ed;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #4ac7ed 0%, #4ac7ed 13%, #f68d2e 13%, #f68d2e 35%, #7c878e 35%, #7c878e 65%, #afc836 65%, #afc836 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #4ac7ed 0%, #4ac7ed 13%, #f68d2e 13%, #f68d2e 35%, #7c878e 35%, #7c878e 65%, #afc836 65%, #afc836 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #4ac7ed 0%, #4ac7ed 13%, #f68d2e 13%, #f68d2e 35%, #7c878e 35%, #7c878e 65%, #afc836 65%, #afc836 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ac7ed', endColorstr='#afc836', GradientType=1);
+    /* IE6-9 */
+    float: left;
+    width: 100%;
+    height: 5px;
+    @include border-radius-topcorner(3px, 3px);
+}
+
+// HEADER SECTION
+header {
+    background: $bloock_semiwhite;
+    @include boxshadow(1px 1px 3px 1px rgba(0, 0, 0, 0.1));
+    .logo {
+        color: $color_default;
+        span {
+            color: $color_darksky;
+        }
+    }
+    .hemburger{
+        float: left;
+        margin: 12px 0 0 25px;
+        .mat-icon{
+            cursor: pointer;
+        }
+    }
+    aside{
+        section{
+            float: left;
+        }
+    }
+    .notification {
+        margin-top: 12px;
+        li {
+            float: left;
+            position: relative;
+            cursor: pointer;
+            span {
+                background: $magenta_semi;
+                color: $color_white;
+                text-align: center;
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                width: 20px;
+                height: 20px;
+                @include border-radius(50%);
+            }
+        }
+    }
+    .user_account {
+        margin-left: 25px;
+        img {
+            float: left;
+            width: 46px;
+            height: 46px;
+            @include border-radius(50%);
+        }
+    }
+}
+
+// LOGIN PAGE
+.loginbox {
+    position: absolute;
+    @include translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    .login {
+        background: $block_white;
+        @include boxshadow(0px 4px 6px 0px rgba(0, 0, 0, 0.3));
+        @include border-radius(3px);
+        padding-bottom: 55px;
+        padding-top: 55px;
+        .login_logo {
+            p {
+                font-size: $fontsize_xxxsm;
+            }
+        }
+        .submit {
+            display: table;
+            margin: auto;
+            background: $color_darksky;
+            color: $color_white;
+        }
+        div {
+            md-icon {
+                margin-right: 5px;
+            }
+        }
+    }
+}
