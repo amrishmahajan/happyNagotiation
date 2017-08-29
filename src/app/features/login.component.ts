@@ -12,7 +12,7 @@ export class LoginComponent {
   }
 
   redirectToHome() {
-    const link = ['./home']
+     let link = ['./home', { outlets: { layout: ['usersetup'] } }];
     this.router.navigate(link);
   }
 }

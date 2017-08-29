@@ -1,6 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header app-header class="container-fluid"></header>
-<!-- <aside app-sidebar></aside> -->
-<router-outlet></router-outlet>
+<header app-header class="container-fluid" (hemBurgerClick)="isClick=$event"></header>
+<aside app-sidebar class="slidenav" [ngClass]="{'slideClose':isClick, slideOpen:!isClick}"></aside>
+<section class="content_container">
+  <div class="col-xs-12">
+    <router-outlet name="layout"></router-outlet>
+  </div>
+</section>
 <footer app-footer></footer>
-

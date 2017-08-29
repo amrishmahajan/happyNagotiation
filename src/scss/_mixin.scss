@@ -59,3 +59,11 @@
 	-ms-transform-origin: $origin;
 	transform-origin: $origin;
 }
+
+@mixin transition($animate){
+	transition: $animate;
+	-webkit-transition: $animate;
+	-moz-transition: $animate;
+	-ms-transition: $animate;
+	-o-transition: $animate;
+}

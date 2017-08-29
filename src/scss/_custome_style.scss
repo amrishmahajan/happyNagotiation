@@ -26,6 +26,7 @@ h6 {
 
 ul {
     list-style: none;
+    @extend h1;
 }
 
 img {
@@ -44,6 +45,22 @@ a {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.full_fluid{
+    float: left;
+    width: 100%;
+}
+
+.example-full-width{
+    @extend .full_fluid;
+}
+
+.content_container{
+    margin-left: 230px;
+    float: left;
+    width: calc(100% - 230px);
+    padding: 25px 0;
 }
 
 .mat-input-ripple {
@@ -128,6 +145,26 @@ header {
     }
 }
 
+// SLIDE NAVIGATION HERE 
+
+.slidenav{
+    width: 230px;
+    position: absolute;
+    min-height: 100%;
+    padding: 15px;
+    background: $purple_dull;
+    color: $color_white;
+    @include transition (all 0.3s ease);
+    a{
+        color:$color_white;
+    }
+    &.slideClose{
+        width: 70px;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+}
+
 // LOGIN PAGE
 .loginbox {
     position: absolute;
@@ -158,3 +195,5 @@ header {
         }
     }
 }
+
+// USER SETUP PAGE

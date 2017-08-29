@@ -18,11 +18,12 @@ import { HomeComponent } from './features/home/home.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdButtonModule, MdCheckboxModule, MdInputModule,MdIconModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdInputModule, MdIconModule, MdRadioModule } from '@angular/material';
 
 import 'hammerjs';
 import { AppRouterModule } from "./app.routes";
-import { AboutComponent } from "./features/home/info/aboutus.component";
+import { UserSetupComponent } from "./features/user/user-setup.component";
+import { AngularDualListBoxModule } from 'angular-dual-listbox';
 
 @NgModule({
   declarations: [
@@ -32,15 +33,16 @@ import { AboutComponent } from "./features/home/info/aboutus.component";
     FooterComponent,
     NotificationComponent,
     UsrAccountComponent,
-    LoginComponent,HomeComponent,AboutComponent
+    LoginComponent, HomeComponent, UserSetupComponent
 
   ],
   imports: [
-    BrowserModule,RouterModule,
-    BrowserAnimationsModule,AppRouterModule,
-    MdButtonModule, MdCheckboxModule,MdInputModule,MdIconModule
+    BrowserModule, RouterModule,
+    BrowserAnimationsModule, AppRouterModule,
+    MdButtonModule, MdCheckboxModule, MdInputModule, MdIconModule, MdRadioModule,
+    AngularDualListBoxModule
   ],
-  exports:[
+  exports: [
     MdIconModule
   ],
   providers: [],

@@ -1,0 +1,29 @@
+<section class="full_fluid">
+  <button md-raised-button class="submit" (click)="redirectToHome()" type="button" class="pull-right">
+        Lagre 
+        <md-icon class="btn_iconsize">&#xE163;</md-icon>
+      </button>
+  <div class="col-xs-12 col-sm-4 col-md-4">
+
+    <section class="full-fluid radio_selection">
+      <md-radio-group>
+        <md-radio-button value="1">Bruker</md-radio-button>
+        <md-radio-button value="2">Avdeling</md-radio-button>
+      </md-radio-group>
+    </section>
+
+    <section class="full-fluid radio_field">
+      <md-input-container class="example-full-width">
+        <input mdInput placeholder="Bruker">
+      </md-input-container>
+    </section>
+
+  </div>
+
+</section>
+
+<section class="full_fluid">
+  <div class="col-xs-12">
+    <dual-list [source]="source" [(destination)]="confirmed"></dual-list>
+  </div>
+</section>
