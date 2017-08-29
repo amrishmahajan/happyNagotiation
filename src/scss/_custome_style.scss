@@ -56,6 +56,11 @@ a {
     @extend .full_fluid;
 }
 
+.btn_darblue{
+    background: $color_darksky;
+    color:$color_white !important;
+}
+
 .content_container{
     margin-left: 230px;
     float: left;
